@@ -1,7 +1,7 @@
 {
-  "name": "arco-design-pro",
+  "name": "words",
   "version": "1.0.0",
-  "description": "Arco Design Pro",
+  "description": "intelgence words",
   "scripts": {
     "start": "react-app-rewired start",
     "dev": "react-app-rewired start",
@@ -75,5 +75,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://127.0.0.1:8888"
 }
