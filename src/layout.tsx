@@ -13,6 +13,7 @@ import {
   IconUser,
   IconMenuFold,
   IconMenuUnfold,
+  IconNotificationClose,
 } from '@arco-design/web-react/icon';
 import { useSelector } from 'react-redux';
 import qs from 'query-string';
@@ -50,6 +51,8 @@ function getIconFromKey(key) {
       return <IconExclamationCircle className={styles.icon} />;
     case 'user':
       return <IconUser className={styles.icon} />;
+    case 'words':
+      return <IconList className={styles.icon} />;
     case 'admin':
       return <IconSettings className={styles.icon} />;
     default:
