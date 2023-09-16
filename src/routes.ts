@@ -168,6 +168,13 @@ export const routes: IRoute[] = [
         //   { resource: 'menu.admin.words', actions: ['read','write'] },
         // ],
       },
+      {
+        name: 'menu.admin.db',
+        key: 'admin/db',
+        // requiredPermissions: [
+        //   { resource: 'menu.admin.words', actions: ['read','write'] },
+        // ],
+      },
     ],
   },
 ];

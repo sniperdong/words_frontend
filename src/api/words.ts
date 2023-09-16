@@ -6,6 +6,7 @@ export const PathAdmin = PathPrefix + '/admin';
 
 // words pathes
 export const PathWords = PathPrefix + '/words';
+export const PathDB = PathPrefix + '/db';
 
 // axios.get('/api/user/userInfo').then((res) => {
 //     store.dispatch({
