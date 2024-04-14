@@ -56,6 +56,14 @@ function AdminWords() {
     getWords();
   }, []);
 
+  // useEffect(() => {
+  //   if (checkLogin()) {
+  //     getWords();
+  //     fetchUserInfo();
+  //   } else if (window.location.pathname.replace(/\//g, '') !== 'login') {
+  //     window.location.pathname = '/login';
+  //   }
+  // }, []);
   const getWords = () => {
     axios.get(PathWords).then((res) => {
       if (res?.data?.Status === StatusOK) {
@@ -273,7 +281,7 @@ function AdminWords() {
               form={form}
               // initialValues={{ }}
               autoComplete="off"
-              // onValuesChange={onValuesChange}
+            // onValuesChange={onValuesChange}
             >
               <Item label="单词" field="spell" rules={[{ required: true }]}>
                 <Input

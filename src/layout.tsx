@@ -14,6 +14,7 @@ import {
   IconMenuFold,
   IconMenuUnfold,
   IconNotificationClose,
+  IconLiveBroadcast,
 } from '@arco-design/web-react/icon';
 import { useSelector } from 'react-redux';
 import qs from 'query-string';
@@ -55,6 +56,8 @@ function getIconFromKey(key) {
       return <IconList className={styles.icon} />;
     case 'admin':
       return <IconSettings className={styles.icon} />;
+    case 'news':
+      return <IconLiveBroadcast className={styles.icon} />;
     default:
       return <div className={styles['icon-empty']} />;
   }

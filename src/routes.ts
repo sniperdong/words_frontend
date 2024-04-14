@@ -12,51 +12,51 @@ export type IRoute = AuthParams & {
 };
 
 export const routes: IRoute[] = [
-  // {
-  //   name: 'menu.dashboard',
-  //   key: 'dashboard',
-  //   children: [
-  //     {
-  //       name: 'menu.dashboard.workplace',
-  //       key: 'dashboard/workplace',
-  //     },
-  //     {
-  //       name: 'menu.dashboard.monitor',
-  //       key: 'dashboard/monitor',
-  //       requiredPermissions: [
-  //         { resource: 'menu.dashboard.monitor', actions: ['write'] },
-  //       ],
-  //     },
-  //   ],
-  // },
-  // {
-  //   name: 'menu.visualization',
-  //   key: 'visualization',
-  //   children: [
-  //     {
-  //       name: 'menu.visualization.dataAnalysis',
-  //       key: 'visualization/data-analysis',
-  //       requiredPermissions: [
-  //         { resource: 'menu.visualization.dataAnalysis', actions: ['read'] },
-  //       ],
-  //     },
-  //     {
-  //       name: 'menu.visualization.multiDimensionDataAnalysis',
-  //       key: 'visualization/multi-dimension-data-analysis',
-  //       requiredPermissions: [
-  //         {
-  //           resource: 'menu.visualization.dataAnalysis',
-  //           actions: ['read', 'write'],
-  //         },
-  //         {
-  //           resource: 'menu.visualization.multiDimensionDataAnalysis',
-  //           actions: ['write'],
-  //         },
-  //       ],
-  //       oneOfPerm: true,
-  //     },
-  //   ],
-  // },
+  {
+    name: 'menu.dashboard',
+    key: 'dashboard',
+    children: [
+      {
+        name: 'menu.dashboard.workplace',
+        key: 'dashboard/workplace',
+      },
+      {
+        name: 'menu.dashboard.monitor',
+        key: 'dashboard/monitor',
+        requiredPermissions: [
+          { resource: 'menu.dashboard.monitor', actions: ['write'] },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'menu.visualization',
+    key: 'visualization',
+    children: [
+      {
+        name: 'menu.visualization.dataAnalysis',
+        key: 'visualization/data-analysis',
+        requiredPermissions: [
+          { resource: 'menu.visualization.dataAnalysis', actions: ['read'] },
+        ],
+      },
+      {
+        name: 'menu.visualization.multiDimensionDataAnalysis',
+        key: 'visualization/multi-dimension-data-analysis',
+        requiredPermissions: [
+          {
+            resource: 'menu.visualization.dataAnalysis',
+            actions: ['read', 'write'],
+          },
+          {
+            resource: 'menu.visualization.multiDimensionDataAnalysis',
+            actions: ['write'],
+          },
+        ],
+        oneOfPerm: true,
+      },
+    ],
+  },
   // {
   //   name: 'menu.list',
   //   key: 'list',
@@ -153,9 +153,9 @@ export const routes: IRoute[] = [
   {
     name: 'menu.words',
     key: 'words',
-    // requiredPermissions: [
-    //   { resource: 'menu.words', actions: ['read'] },
-    // ],
+    requiredPermissions: [
+      { resource: 'menu.words', actions: ['read'] },
+    ],
   },
   {
     name: 'menu.admin',
@@ -164,17 +164,37 @@ export const routes: IRoute[] = [
       {
         name: 'menu.admin.words',
         key: 'admin/words',
-        // requiredPermissions: [
-        //   { resource: 'menu.admin.words', actions: ['read','write'] },
-        // ],
+        requiredPermissions: [
+          { resource: 'menu.admin.words', actions: ['read', 'write'] },
+        ],
       },
       {
         name: 'menu.admin.db',
         key: 'admin/db',
-        // requiredPermissions: [
-        //   { resource: 'menu.admin.words', actions: ['read','write'] },
-        // ],
+        requiredPermissions: [
+          { resource: 'menu.admin.words', actions: ['read', 'write'] },
+        ],
       },
+    ],
+  },
+  {
+    name: 'menu.news',
+    key: 'news',
+    children: [
+      {
+        name: 'menu.news.show',
+        key: 'news/show',
+        requiredPermissions: [
+          { resource: 'menu.news.show', actions: ['read', 'write'] },
+        ],
+      },
+      {
+        name: 'menu.news.admin',
+        key: 'news/admin',
+        requiredPermissions: [
+          { resource: 'menu.news.show', actions: ['read', 'write'] },
+        ],
+      }
     ],
   },
 ];

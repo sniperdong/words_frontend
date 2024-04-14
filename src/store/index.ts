@@ -16,7 +16,9 @@ export interface GlobalState {
 const initialState: GlobalState = {
   settings: defaultSettings,
   userInfo: {
-    permissions: {},
+    permissions: {
+      'menu.admin.words': ['read', 'write']
+    },
   },
 };
 

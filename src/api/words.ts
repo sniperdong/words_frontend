@@ -1,5 +1,8 @@
-// path prefix
-export const PathPrefix = '/api';
+// import axios from "axios";
+
+import { PathPrefix } from "./const";
+
+
 
 // admin pathes
 export const PathAdmin = PathPrefix + '/admin';
@@ -10,7 +13,7 @@ export const PathDB = PathPrefix + '/db';
 
 // axios.get('/api/user/userInfo').then((res) => {
 //     store.dispatch({
-//       type: 'update-userInfo',
-//       payload: { userInfo: res.data, userLoading: false },
+//         type: 'update-userInfo',
+//         payload: { userInfo: res.data, userLoading: false },
 //     });
-//   });
+// });
