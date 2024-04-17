@@ -192,8 +192,16 @@ export const routes: IRoute[] = [
         name: 'menu.news.admin',
         key: 'news/admin',
         requiredPermissions: [
-          { resource: 'menu.news.show', actions: ['read', 'write'] },
+          { resource: 'menu.news.admin', actions: ['read', 'write'] },
         ],
+      },
+      {
+        name: 'menu.news.reply',
+        key: 'news/reply',
+        requiredPermissions: [
+          { resource: 'menu.news.reply', actions: ['read', 'write'] },
+        ],
+        ignore: true,
       }
     ],
   },

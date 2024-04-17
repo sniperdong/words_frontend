@@ -4,7 +4,7 @@ import setupMock from '@/utils/setupMock';
 
 setupMock({
   setup: () => {
-    Mock.mock(new RegExp('/api/workplace/overview-content'), () => {
+    Mock.mock(new RegExp('/api/workplace/-content'), () => {
       const year = new Date().getFullYear();
       const getLineData = () => {
         return new Array(12).fill(0).map((_item, index) => ({

@@ -12,10 +12,13 @@ export const PathNewsShow = PathNewsUserPrefix + '/list';
 // news admin parthes 
 export const PathNewsAdminShow = PathNewsAdminPrefix + '/list';
 export const PathNewsAdminTotal = PathNewsAdminPrefix + '/total';
-export const PathNewsAdminVideoUpPublish = PathNewsAdminPrefix + '/v/up/publish';
-export const PathNewsAdminVideoUpMemo = PathNewsAdminPrefix + '/v/up/memo';
-export const PathNewsAdminVideoUpContent = PathNewsAdminPrefix + '/v/up/content';
-
+export const PathNewsAdminVideo = PathNewsAdminPrefix + '/v';
+export const PathNewsAdminVideoLike = PathNewsAdminPrefix + '/v/like';
+export const PathNewsAdminVideoStar = PathNewsAdminPrefix + '/v/star';
+export const PathNewsAdminVideoLog = PathNewsAdminVideo + '/log';
+export const PathNewsAdminVideoLogSlice = PathNewsAdminVideoLog + '/slice';
+export const PathNewsAdminVideoLogLike = PathNewsAdminVideo + '/log/like';
+export const PathNewsAdminVideoLogStar = PathNewsAdminVideo + '/log/star';
 
 // upload file pathes
 export const PathUploadVideoPrefix = PathUploadPrefix + "/v";
